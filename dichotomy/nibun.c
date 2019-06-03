@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <float.h>
 #include <math.h>
 
 double f(double x){
@@ -12,7 +13,7 @@ void nibun(double a_0,double b_0){
   double b_k = b_0;
   double c ;
 
-  for (k = 0;fabs(a_k - b_k) > FLT_EPSILON;k++){
+  for (k = 0;fabs(a_k - b_k) > DBL_EPSILON;k++){
     c = (a_k + b_k)/2;
 
     if (f(c) * f(a_k) <= 0){
@@ -34,7 +35,7 @@ void hasaami(double a_0,double b_0){
   double w_k;
   double c ;
 
-  for (k = 0;fabs(a_k - b_k) > FLT_EPSILON;k++){
+  for (k = 0;fabs(a_k - b_k) > DBL_EPSILON;k++){
     w_k = (f(b_k)*a_k - f(a_k)*b_k) / (f(b_k) - f(a_k));
 
     if(f(w_k) * f(a_k) <= 0){
