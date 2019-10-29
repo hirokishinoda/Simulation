@@ -9,7 +9,7 @@ int main(void){
                     {1, 8, 3},
                     {2, 3, 9}};
   double b[N] = {10, 8, 6};
-  double x[N] = {0, 0, 0};
+  double x[N] = {-10, -10, -1};
   double tmp_x[N] = {0, 0, 0};
   int j,k;
   double error, tmp_ans, out;
