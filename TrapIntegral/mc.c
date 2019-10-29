@@ -15,10 +15,12 @@ int main(void){
 
   for(i = 0;i < MAX_LOOP;i++){
     x = (double)rand() % x_2 + x_1;
-    y = (double)rand() ;
+    y = (double)rand() % f(x_2);
 
     if (y < f(x)) count++;
   }
+
+  printf("S = %lf\n",)
 
   return 0;
 }
