@@ -3,7 +3,7 @@
 #include <math.h>
 #include <time.h>
 
-#define N 10000
+#define N 100000
 #define MIN_Y -11
 
 double f(double x){
@@ -26,7 +26,7 @@ int main(void){
     y = MIN_Y + rand() % ((int)f(x_2) - MIN_Y) + (double)rand() / RAND_MAX;
     // yがf(x)より小さかったらカウント（関数の面積内をカウント）
     if (f(x) < 0){
-      if (y > f(x) && y < 0) count++;
+      if (y > f(x) && y < 0) count--;
     }else{
       if (y < f(x) && y >= 0) count++;
     }

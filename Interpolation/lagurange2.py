@@ -1,11 +1,12 @@
 import sympy
 import numpy as np
 from sympy.plotting import plot
+import matplotlib.pyplot as plt
 
 def f(x):
     return 1 / (1 + 25*x**2)
 
-split_num = 5
+split_num = 21
 data = []
 for i in range(split_num+1):
     x = -1 + 2/split_num * i
@@ -26,4 +27,5 @@ for k in range(N):
 
 print(sympy.expand(y))
 
-plot(y, (x, -2, 2))
+plot(y)
+plot(f(x))
