@@ -64,6 +64,17 @@ int gauss(double a[N][N+1]){
 
   // 前進法
   for(k = 0;k < N;k++){
+    // ピボット選択
+    p = k;
+    pmax = fabs(a[k][k]);
+    for(l = k+1;l < N;l++){
+      if(fabs(a[l][k]) > pmax){
+        p = l;
+        pmax = fabs(a[l][k])
+      }
+    }
+
+    // 前向き
     for(j = k+1;j < N+1;j++){
       a[k][j] = a[k][j] / a[k][k];
       cnt++;
